@@ -5,6 +5,8 @@ import java.util.Stack;
  */
 public class Main {
 
+    // todo - create an Operator enum. Add apply e.g: top.operator.apply(left, right) orrrr
+    // todo - have the apply method take the stack and do the calculation of left and right inside the method
     private static class Node {
         public String operator;
         public int value;
