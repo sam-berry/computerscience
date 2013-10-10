@@ -11,9 +11,6 @@ public class Main {
         public String operator;
         public int value;
 
-        // comment for testing git
-
-
         public static Node of(String operator) {
             Node node = new Node();
             node.operator = operator;
