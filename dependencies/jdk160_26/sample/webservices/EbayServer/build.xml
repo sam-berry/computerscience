@@ -7,7 +7,7 @@
   (http://www.netbeans.org).
 -->
 
-<project name="EbayServer" default="dist" basedir=".">
+<project name="EbayServer" default="dist" basedir="">
 
     <import file="nbproject/jdk.xml"/>
     
