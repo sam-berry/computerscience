@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../dependencies/dependencies.iml" filepath="$PROJECT_DIR$/../dependencies/dependencies.iml" />
       <module fileurl="file://$PROJECT_DIR$/stack-calc.iml" filepath="$PROJECT_DIR$/stack-calc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tree-calc/tree-calc.iml" filepath="$PROJECT_DIR$/../tree-calc/tree-calc.iml" />
     </modules>
   </component>
 </project>

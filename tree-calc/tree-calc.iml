@@ -13,9 +13,7 @@
           <root url="file://$MODULE_DIR$/../dependencies/lib" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.ideaLibSources/guava-15.0-sources.jar!/" />
-        </SOURCES>
+        <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/../dependencies/lib" recursive="false" />
       </library>
     </orderEntry>
