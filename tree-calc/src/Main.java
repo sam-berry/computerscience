@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class Main {
 
-    // todo: we should clean up the project so the jdk isn't committed and recreate the project to be file-based instead of directory based and put the project file in /computerscience instead of /computerscience/stack-calc
+    // todo: should clean up the project so the jdk isn't committed and recreate the project to be file-based instead of directory based and put the project file in /computerscience instead of /computerscience/stack-calc
 
 
     public static void main(String[] args) {
