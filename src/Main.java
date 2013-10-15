@@ -21,7 +21,7 @@ public class Main {
         stack.push(ArithmeticNode.of(Operator.MINUS));
         stack.push(ArithmeticNode.of(Operator.PLUS));
 
-        int total = StackCalculations.calculate(stack);
+        int total = ArithmeticStackCalculator.calculate(stack);
 
         System.out.println("Result = " + total);
     }

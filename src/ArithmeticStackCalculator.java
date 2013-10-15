@@ -3,7 +3,7 @@ import java.util.Stack;
 /**
  * @author berrysa
  */
-public class StackCalculations {
+public class ArithmeticStackCalculator {
     public static int calculate(Stack<ArithmeticNode> stack) {
         ArithmeticNode top = stack.pop();
         if (top.operator == null) {
