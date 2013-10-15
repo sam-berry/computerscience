@@ -4,8 +4,8 @@ import java.util.Stack;
  * @author berrysa
  */
 public class StackCalculations {
-    public static int calculate(Stack<Node> stack) {
-        Node top = stack.pop();
+    public static int calculate(Stack<ArithmeticNode> stack) {
+        ArithmeticNode top = stack.pop();
         if (top.operator == null) {
             return top.value;
         }
