@@ -1,3 +1,5 @@
+package org.computerscience.berrysa.calc;
+
 /**
  * @author berrysa
  */

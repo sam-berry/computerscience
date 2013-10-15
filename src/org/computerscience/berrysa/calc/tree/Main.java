@@ -1,3 +1,5 @@
+package org.computerscience.berrysa.calc.tree;
+
 import com.google.common.base.Stopwatch;
 
 import java.util.concurrent.TimeUnit;
@@ -5,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author berrysa
  */
-public class Main2 {
+public class Main {
     public static void main(String[] args) {
         Stopwatch stopwatch = Stopwatch.createStarted();
 

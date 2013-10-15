@@ -1,11 +1,13 @@
+package org.computerscience.berrysa.calc.stack;
+
 import java.util.Stack;
 
 /**
  * @author berrysa
  */
-public class ArithmeticStackCalculator {
-    public static int calculate(Stack<ArithmeticNode> stack) {
-        ArithmeticNode top = stack.pop();
+public class Calculator {
+    public static int calculate(Stack<Node> stack) {
+        Node top = stack.pop();
         if (top.operator == null) {
             return top.value;
         }
