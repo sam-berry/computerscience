@@ -1,7 +1,7 @@
 /**
  * @author berrysa
  */
-public enum Operator {
+public enum Operator { //todo: add INCREMENT and DECREMENT
     PLUS {
         public int apply(int left, int right) {
             return left + right;
