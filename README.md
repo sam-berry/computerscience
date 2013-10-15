@@ -1,4 +1,4 @@
 computerscience
 ===============
 
-Home for random computer science experiments
+Home for random computer science experiments.
