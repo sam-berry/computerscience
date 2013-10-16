@@ -27,7 +27,7 @@ public class Main {
 
         int total = Calculator.calculate(stack);
 
-        System.out.println("Result = " + total);
+        System.out.println("Result = " + total); //todo: print out expression
     }
 
 }
