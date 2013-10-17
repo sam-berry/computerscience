@@ -1,4 +1,4 @@
-package org.computerscience.egillespie.calc.stack;
+package org.computerscience.egillespie.calc.stack.operator.binary;
 
 public class Division extends BinaryOperator {
 

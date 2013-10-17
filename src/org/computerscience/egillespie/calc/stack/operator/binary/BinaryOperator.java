@@ -1,4 +1,7 @@
-package org.computerscience.egillespie.calc.stack;
+package org.computerscience.egillespie.calc.stack.operator.binary;
+
+import org.computerscience.egillespie.calc.stack.Expression;
+import org.computerscience.egillespie.calc.stack.Symbol;
 
 public abstract class BinaryOperator implements Symbol {
 
