@@ -8,3 +8,9 @@ Home for random computer science experiments.
 
 * Port the whole project over to JDK 1.7.
 * Invite Samson as a contributor.
+
+* Implement Heap
+** deleteMin and insert functions
+** support minHeap and maxHeap
+*** ? Find a way to implement a heap that can build a minHeap or a maxHeap. How can you factor out the min\max aspect of the heap?
+** Heap sort
