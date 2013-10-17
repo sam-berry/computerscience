@@ -27,4 +27,19 @@ public class CalculatorTest {
 
         assertEquals(64, total);
     }
+
+    @Test
+    public void testUnaryOperators() {
+        Expression expression = Expression.builder()
+                .constant(10)
+                .decrement()
+                .negate()
+                .increment()
+                .abs()
+                .build();
+
+        int total = expression.evaluate();
+
+        assertEquals(8, total);
+    }
 }

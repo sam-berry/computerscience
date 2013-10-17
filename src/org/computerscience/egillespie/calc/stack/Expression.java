@@ -1,5 +1,14 @@
 package org.computerscience.egillespie.calc.stack;
 
+import org.computerscience.egillespie.calc.stack.operator.binary.Addition;
+import org.computerscience.egillespie.calc.stack.operator.binary.Division;
+import org.computerscience.egillespie.calc.stack.operator.binary.Multiplication;
+import org.computerscience.egillespie.calc.stack.operator.binary.Subtraction;
+import org.computerscience.egillespie.calc.stack.operator.unary.Absolute;
+import org.computerscience.egillespie.calc.stack.operator.unary.Decrement;
+import org.computerscience.egillespie.calc.stack.operator.unary.Increment;
+import org.computerscience.egillespie.calc.stack.operator.unary.Negate;
+
 import java.util.Stack;
 
 public class Expression extends Stack<Symbol> {
@@ -23,29 +32,45 @@ public class Expression extends Stack<Symbol> {
             return expression;
         }
 
-        public Builder constant(int value) {
-            expression.push(new Constant(value));
+        private Builder push(Symbol symbol) {
+            expression.push(symbol);
             return this;
+        }
+
+        public Builder constant(int value) {
+            return push(new Constant(value));
         }
 
         public Builder divide() {
-            expression.push(Division.INSTANCE);
-            return this;
+            return push(Division.INSTANCE);
         }
 
         public Builder multiply() {
-            expression.push(Multiplication.INSTANCE);
-            return this;
+            return push(Multiplication.INSTANCE);
         }
 
         public Builder add() {
-            expression.push(Addition.INSTANCE);
-            return this;
+            return push(Addition.INSTANCE);
         }
 
         public Builder subtract() {
-            expression.push(Subtraction.INSTANCE);
-            return this;
+            return push(Subtraction.INSTANCE);
+        }
+
+        public Builder abs() {
+            return push(Absolute.INSTANCE);
+        }
+
+        public Builder negate() {
+            return push(Negate.INSTANCE);
+        }
+
+        public Builder increment() {
+            return push(Increment.INSTANCE);
+        }
+
+        public Builder decrement() {
+            return push(Decrement.INSTANCE);
         }
     }
 }
