@@ -1,6 +1,6 @@
 package org.computerscience.berrysa.calc.stack;
 
-import org.computerscience.berrysa.calc.Operator;
+import org.computerscience.berrysa.calc.BinaryOperator;
 
 import java.util.Stack;
 
@@ -13,17 +13,17 @@ public class Main {
 
         stack.push(Node.of(2));
         stack.push(Node.of(4));
-        stack.push(Node.of(Operator.DIVIDE));
+        stack.push(Node.of(BinaryOperator.DIVIDE));
         stack.push(Node.of(3));
         stack.push(Node.of(1));
-        stack.push(Node.of(Operator.PLUS));
-        stack.push(Node.of(Operator.MINUS));
+        stack.push(Node.of(BinaryOperator.PLUS));
+        stack.push(Node.of(BinaryOperator.MINUS));
         stack.push(Node.of(1));
         stack.push(Node.of(7));
         stack.push(Node.of(9));
-        stack.push(Node.of(Operator.MULTIPLY));
-        stack.push(Node.of(Operator.MINUS));
-        stack.push(Node.of(Operator.PLUS));
+        stack.push(Node.of(BinaryOperator.MULTIPLY));
+        stack.push(Node.of(BinaryOperator.MINUS));
+        stack.push(Node.of(BinaryOperator.PLUS));
 
         int total = Calculator.calculate(stack);
 
