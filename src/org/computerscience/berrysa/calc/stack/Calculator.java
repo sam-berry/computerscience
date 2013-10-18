@@ -17,11 +17,11 @@ public class Calculator {
 
         return top.operator.apply(left, right);
     }
-
-    public static String determineExpression(Stack<Node> stack, StringBuilder sb) {
-        Node top = stack.pop();
-        if (stack.peek() == null) {
-            return top.operator.value();
-        }
-    }
+//
+//    public static String determineExpression(Stack<Node> stack, StringBuilder sb) {
+//        Node top = stack.pop();
+//        if (stack.peek() == null) {
+//            return top.operator.value();
+//        }
+//    }
 }
