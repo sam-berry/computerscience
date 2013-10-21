@@ -1,23 +1,32 @@
 package org.computerscience.berrysa.calc.heap;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
 /**
  * @author berrysa
  */
 public class Main {
     public static void main(String[] args) {
-        int size = 11;
-        int[] testArray = buildTestArray2();
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-        System.out.println("Pre-Heapified array: ");
-        for (int i=0; i < size; i++) {
-            System.out.println(testArray[i]);
-        }
+        try {
+            System.out.println("Enter the size of the array: ");
+            String inputSize = bufferedReader.readLine();
+            int size = Integer.parseInt(inputSize);
+            int[] testArray = buildTestArray(size);
 
-        buildHeap(testArray, size);
+            System.out.println("Pre-heapify array: ");
+            printArray(testArray);
 
-        System.out.println("Heapified array: ");
-        for (int i=0; i < size; i++) {
-            System.out.println(testArray[i]);
+            System.out.println("Heapified array: ");
+            buildHeap(testArray, size);
+            printArray(testArray);
+        } catch (IOException e) {
+            System.out.println("IOException caught.");
         }
     }
 
@@ -53,34 +62,20 @@ public class Main {
         }
     }
 
-    private static int[] buildTestArray1() {
-        int[] testArray = new int[10];
-        testArray[0] = 28;
-        testArray[1] = 19;
-        testArray[2] = 31;
-        testArray[3] = 42;
-        testArray[4] = 12;
-        testArray[5] = 14;
-        testArray[6] = 92;
-        testArray[7] = 35;
-        testArray[8] = 11;
-        testArray[9] = 24;
+    private static int[] buildTestArray(int size) {
+        int[] testArray = new int[size];
+        Random generator = new Random(76576L);
+
+        for (int i = 0; i < size; i++) {
+            testArray[i] = generator.nextInt();
+        }
+
         return testArray;
     }
 
-    private static int[] buildTestArray2() {
-        int[] testArray = new int[11];
-        testArray[0] = 6;
-        testArray[1] = 5;
-        testArray[2] = 4;
-        testArray[3] = 3;
-        testArray[4] = 2;
-        testArray[5] = 1;
-        testArray[6] = 11;
-        testArray[7] = 9;
-        testArray[8] = 8;
-        testArray[9] = 10;
-        testArray[10] = 7;
-        return testArray;
+    private static void printArray(int[] array) {
+        for (int element : array) {
+            System.out.println(element);
+        }
     }
 }
