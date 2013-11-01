@@ -8,34 +8,14 @@ import java.util.List;
  * @author berrysa
  */
 public class Vertex {
-    private List<Vertex> adjacentVertices;
+    private final String id;
+    private final List<Vertex> adjacentVertices;
     private int indegree; // # of incoming edges
 
-    private Vertex(Builder builder) {
-        adjacentVertices = builder.adjacentVertices;
-        indegree = builder.indegree;
-    }
-
-    public static Builder builder() {
-        return new Builder();
-    }
-
-    public static class Builder {
-        private List<Vertex> adjacentVertices;
-        private int indegree;
-
-        public Builder() {
-            adjacentVertices = Lists.newArrayList();
-        }
-
-        public Vertex build() {
-            return new Vertex(this);
-        }
-
-        public Builder addAdjacentVertex(Vertex vertex) {
-            adjacentVertices.add(vertex);
-            return this;
-        }
+    public Vertex(String id) {
+        this.id = id;
+        adjacentVertices = Lists.newArrayList();
+        indegree = 0;
     }
 
     public void incrementIndegree() {
@@ -44,6 +24,16 @@ public class Vertex {
 
     public void decrementIndegree() {
         indegree--;
+    }
+
+    public Vertex addConnection(Vertex vertex) {
+        vertex.incrementIndegree();
+        adjacentVertices.add(vertex);
+        return this;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public List<Vertex> getAdjacentVertices() {
