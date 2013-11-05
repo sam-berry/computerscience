@@ -1,0 +1,22 @@
+public static Builder builder() {
+return new Builder();
+
+
+public static class Builder {
+#foreach ($field in $fields)
+private $field.typeName $field.name;
+#end
+
+#foreach ($field in $fields)
+public Builder set$field.name.substring(0,1).toUpperCase()$field.name.substring(1)($field.typeName $field.name) {
+this.$field.name = $field.name;
+return this;
+}
+
+#end
+
+public $classname build() {
+return new $classname(#set ($i = 0)#foreach ( $field in $fields )$field.accessor#if ( $i == $fields.size() - 1 ));#{else},
+#end#set ( $i = $i + 1 )#end
+}
+}

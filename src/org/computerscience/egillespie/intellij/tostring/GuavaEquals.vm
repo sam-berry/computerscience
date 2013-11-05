@@ -1,0 +1,15 @@
+public boolean equals(Object o) {
+if (this == o) {
+return true;
+}
+if (o == null || getClass() != o.getClass()) {
+return false;
+}
+$classname that = ($classname) o;
+#set ( $i = 0 )
+return#foreach ( $member in $members )
+    #if ( $i > 0 )
+
+    &&##
+    #end com.google.common.base.Objects.equal(this.$member.accessor, that.$member.accessor)#set ( $i = $i + 1 )#end;
+}

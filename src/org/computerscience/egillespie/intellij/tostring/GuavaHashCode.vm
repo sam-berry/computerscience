@@ -1,0 +1,6 @@
+public int hashCode() {
+#set ( $i = 0 )
+return com.google.common.base.Objects.hashCode(
+#foreach ( $member in $members )$member.accessor#if ( $i == $members.size() - 1 ));#{else},
+#end#set ( $i = $i + 1 )#end
+}
