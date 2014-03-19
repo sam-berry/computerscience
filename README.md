@@ -16,4 +16,4 @@ Home for random computer science experiments.
 ** Heap sort
 
 * IntelliJ Builder Template
-** Support generics and primitives
+* * Support generics and primitives
