@@ -14,3 +14,6 @@ Home for random computer science experiments.
 ** support minHeap and maxHeap
 *** ? Find a way to implement a heap that can build a minHeap or a maxHeap. How can you factor out the min\max aspect of the heap?
 ** Heap sort
+
+* IntelliJ Builder Template
+** Support generics and primitives
