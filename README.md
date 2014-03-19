@@ -17,3 +17,5 @@ Home for random computer science experiments.
 
 * IntelliJ Builder Template
 * * Support generics and primitives
+
+todo(sb): fix my wiki syntax^^
