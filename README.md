@@ -18,4 +18,7 @@ Home for random computer science experiments.
 * IntelliJ Builder Template
 * * Support generics and primitives
 
+* Create an algorithm that takes a matrix and returns a puzzle like Dobafest
+* Create an algorithm that takes a puzzle and returns the matrix
+
 todo(sb): fix my wiki syntax^^
